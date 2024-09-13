@@ -162,9 +162,9 @@ function disable_pwr_mgmt() {
 
 function disable_onboard_audio() {
   # Disable the onboard audio adapter
-  sudo cp /boot/config.txt /boot/config.bak
+  sudo cp /boot/firmware/config.txt /boot/firmware/config.bak
   echo 'Disabling RaspberryPi on-board audio adapter'
-  CONFIG='/boot/config.txt'
+  CONFIG='/boot/firmware/config.txt'
   SETTING='off'
   sudo sed $CONFIG -i -r -e "s/^((device_tree_param|dtparam)=([^,]*,)*audio?)(=[^,]*)?/\1=$SETTING/"
   if ! grep -q -E '^(device_tree_param|dtparam)=([^,]*,)*audio?=[^,]*' $CONFIG; then
