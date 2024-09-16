@@ -178,7 +178,7 @@ function configure_audio() {
   echo 'Configuring ALSA to use external USB audio adapter'
   CONFIG='/usr/share/alsa/alsa.conf'
   TEMP='alsa.temp'
-  SETTING='1'
+  SETTING='0'
   sudo cp $CONFIG $TEMP
   sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card $SETTING/g" \
   -e "s/defaults\.ctl\.card [01]/defaults.ctl.card $SETTING/g" $TEMP
