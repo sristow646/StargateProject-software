@@ -2,6 +2,7 @@ import sys
 import time
 import asyncio
 import websockets
+#include <sys/types.h>
 
 class LogTailServer():
     # pylint: disable=too-few-public-methods

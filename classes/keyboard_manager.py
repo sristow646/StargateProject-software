@@ -83,7 +83,7 @@ class KeyboardManager:
         for char_in in self.symbol_manager.get_symbol_key_map():
             # Transform upper case presses
             char = char_in
-            if char_in != char_in.lower():
+            if isinstance(char_in, str) and char_in != char_in.lower():
                 char = f"shift+{char.lower()}"
 
             # Add the hotkey

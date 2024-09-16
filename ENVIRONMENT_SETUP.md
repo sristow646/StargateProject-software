@@ -5,6 +5,9 @@ It is **highly** recommended to build your gate by using the pre-built Disk Imag
 
 The majority of the installation is completed by a script at `sg1_v4/install/install.sh`, but we need to get the basics configured first.
 
+## Create an account on https://app.rollbar.com and also an project inside.
+copy the Project Access Tokens with the rights post_server_item put them into the main.py line 43
+
 ## Flash the SD Card with Raspbian
 1. Download the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 2. Open the Imager, and click "Choose OS."
