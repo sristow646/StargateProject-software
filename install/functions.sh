@@ -173,19 +173,19 @@ function disable_onboard_audio() {
   fi
 }
 
-function configure_audio() {
+#function configure_audio() {
   # Configure ALSA to use the external audio adapter
-  echo 'Configuring ALSA to use external USB audio adapter'
-  CONFIG='/usr/share/alsa/alsa.conf'
-  TEMP='alsa.temp'
-  SETTING='0'
-  sudo cp $CONFIG $TEMP
-  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
-  -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" $TEMP
-  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
-  -e "s/defaults\.pcm\.card [01]/defaults.pcm.card 0/g" $TEMP
-  sudo mv $TEMP $CONFIG
-}
+#  echo 'Configuring ALSA to use external USB audio adapter'
+#  CONFIG='/usr/share/alsa/alsa.conf'
+#  TEMP='alsa.temp'
+#  SETTING='0'
+#  sudo cp $CONFIG $TEMP
+#  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
+#  -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" $TEMP
+#  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
+#  -e "s/defaults\.pcm\.card [01]/defaults.pcm.card 0/g" $TEMP
+#  sudo mv $TEMP $CONFIG
+#}
 
 function configure_logrotate() {
   # Load the logrotated configs
