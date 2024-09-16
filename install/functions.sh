@@ -180,10 +180,10 @@ function configure_audio() {
   TEMP='alsa.temp'
   SETTING='0'
   sudo cp $CONFIG $TEMP
-  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card $SETTING/g" \
-  -e "s/defaults\.ctl\.card [01]/defaults.ctl.card $SETTING/g" $TEMP
-  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card $SETTING/g" \
-  -e "s/defaults\.pcm\.card [01]/defaults.pcm.card $SETTING/g" $TEMP
+  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
+  -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" $TEMP
+  sudo sed -i -e "s/defaults\.ctl\.card [01]/defaults.ctl.card 0/g" \
+  -e "s/defaults\.pcm\.card [01]/defaults.pcm.card 0/g" $TEMP
   sudo mv $TEMP $CONFIG
 }
 
